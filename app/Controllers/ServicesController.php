@@ -27,7 +27,10 @@ class ServicesController extends Controller
                     fn (string $slug) => $model->findBySlug($slug),
                     $item['services'] ?? []
                 ));
-                $this->render('pages/category', [
+                $customView = 'pages/categories/' . trim($item['url'], '/');
+                $view = file_exists(base_path('app/Views/' . $customView . '.php')) ? $customView : 'pages/category';
+
+                $this->render($view, [
                     'pageTitle' => $item['label'],
                     'category' => $item,
                     'services' => $services,
