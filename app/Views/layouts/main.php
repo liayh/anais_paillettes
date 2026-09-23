@@ -11,7 +11,7 @@ $title = isset($pageTitle) ? $pageTitle . ' | ' . $seo['default_title'] : $seo['
     <meta name="description" content="<?= htmlspecialchars($seo['meta_description']) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= asset('public/assets/css/style.css') ?>">
 </head>
 <body>
