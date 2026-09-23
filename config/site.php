@@ -64,7 +64,7 @@ return [
             'slug' => 'mini-club',
             'title' => 'Mini club',
             'short' => 'Une célébration sereine pour les parents.',
-            'description' => 'Coins jeux, animations au choix, accompagnement au repas et au coucher pour les événements familiaux.',
+            'description' => 'Coins jeux, animations au choix, accompagnement au repas et au coucher pour les événements familiaux et professionnels.',
             'highlights' => [
                 'Formule Sérénité jusqu\'à 15 enfants',
                 'Formule Prestige jusqu\'à 30 enfants',
