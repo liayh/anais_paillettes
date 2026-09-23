@@ -79,6 +79,13 @@ return [
         ['number' => '7j/7', 'label' => 'Réponse devis'],
     ],
     'galleries' => [
+        'mini-club' => [
+            'url' => '/mariages-fetes/galerie',
+            'title' => 'Le Mini Club en images',
+            'subtitle' => 'Jeux, douceur et petites attentions : un aperçu de l’univers du Mini Club.',
+            'alt' => 'Ambiance Mini Club',
+            'back' => ['label' => 'Retour au Mini Club', 'url' => '/mariages-fetes'],
+        ],
         'anniversaires' => [
             'url' => '/anniversaires/galerie',
             'title' => 'Les anniversaires en images',

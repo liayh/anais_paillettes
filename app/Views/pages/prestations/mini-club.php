@@ -158,3 +158,9 @@ $offers = [
         <p class="mc-phone"><a href="tel:+33783659843">📞 <?= htmlspecialchars($phone) ?></a></p>
     </div>
 </section>
+
+<?php
+$galleryFolder = 'mini-club';
+$galleryPreview = 1;
+require base_path('app/Views/partials/gallery.php');
+?>
