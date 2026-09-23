@@ -78,6 +78,15 @@ return [
         ['number' => 'Charente', 'label' => 'Zone d\'intervention'],
         ['number' => '7j/7', 'label' => 'Réponse devis'],
     ],
+    'galleries' => [
+        'anniversaires' => [
+            'url' => '/anniversaires/galerie',
+            'title' => 'Les anniversaires en images',
+            'subtitle' => 'Couleurs, paillettes et éclats de rire : un aperçu de l’ambiance des fêtes.',
+            'alt' => 'Ambiance d’anniversaire',
+            'back' => ['label' => 'Retour aux anniversaires', 'url' => '/anniversaires'],
+        ],
+    ],
     'seo' => [
         'default_title' => 'Anaïs Paillettes & Co',
         'meta_description' => 'Site vitrine MVC en PHP orienté objet pour une activité événementielle : maquillage artistique, bulles enchantées et mini club.',

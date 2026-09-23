@@ -531,3 +531,5 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--violet); outlin
 .lightbox-nav { top: 50%; transform: translateY(-50%); }
 .lightbox-prev { left: 1rem; }
 .lightbox-next { right: 1rem; }
+.gallery-more { justify-content: center; margin-top: 2.5rem; }
+a.gallery-item { cursor: pointer; }

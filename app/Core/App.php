@@ -3,6 +3,7 @@
 namespace App\Core;
 
 use App\Controllers\ContactController;
+use App\Controllers\GalleryController;
 use App\Controllers\HomeController;
 use App\Controllers\ServicesController;
 
@@ -26,6 +27,9 @@ class App
             if (isset($item['intro'])) {
                 $router->get($item['url'], [ServicesController::class, 'category']);
             }
+        }
+        foreach (config('site')['galleries'] as $gallery) {
+            $router->get($gallery['url'], [GalleryController::class, 'show']);
         }
         $router->get('/contact', [ContactController::class, 'index']);
 
