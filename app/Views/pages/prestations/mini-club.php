@@ -15,7 +15,7 @@ $timeline = [
 $offers = [
     ['title' => 'Mini Club', 'price' => '750 €', 'when' => 'De 18 h à minuit', 'items' => ['Animation et accompagnement au repas et au coucher', 'Maquillage professionnel', 'Activités créatives et jeux', 'Livres, peluches et jeux de société']],
     ['title' => 'Option Coin extérieur', 'price' => '+ 250 €', 'when' => 'Lorsque le lieu le permet', 'items' => ['2 tipis et petite table', 'Tapis et coussins', 'Jeux d’extérieur et bulles', 'Coloriages, jeux de société et jeux en bois']],
-    ['title' => 'L’Instant Bulles', 'price' => '+ 290 €', 'when' => '30 minutes pendant le vin d’honneur ou la cérémonie laïque', 'items' => ['Bulles géantes', 'Filets de bulles', 'Bulles de fumée', 'Animation participative']],
+    ['title' => 'L’Instant Bulles', 'price' => '+ 290 €', 'when' => '30 minutes pendant le vin d’honneur ou la cérémonie laïque', 'items' => ['Bulles géantes', 'Filets de bulles', 'Bulles de fumée et de feu', 'Animation poétique et participative']],
 ];
 ?>
 <section class="page-banner page-banner-center mc-hero">
