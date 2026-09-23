@@ -35,7 +35,6 @@
 <section class="section">
     <div class="container section-heading">
         <span class="eyebrow">Prestations</span>
-        <h2>Une vitrine moderne, visuelle et facile à administrer</h2>
         <p>Découvrez les animations et composez votre événement sur mesure.</p>
     </div>
     <div class="container cards-grid">
