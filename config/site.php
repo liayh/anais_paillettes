@@ -12,7 +12,7 @@ return [
     ],
     'navigation' => [
         ['label' => 'Accueil', 'url' => '/'],
-        ['label' => 'Mariages & Fêtes', 'url' => '/mariages-fetes', 'intro' => 'Des animations pour partager de beaux moments lors de vos fêtes et mariages.', 'services' => ['mini-club', 'maquillage-artistique', 'bulles-enchantees']],
+        ['label' => 'Mariages & Fêtes', 'url' => '/mariages-fetes', 'intro' => 'Des animations pour partager de beaux moments lors de vos fêtes et mariages.', 'services' => ['mini-club']],
         ['label' => 'Anniversaires', 'url' => '/anniversaires', 'intro' => 'Composez un anniversaire autour du maquillage, des bulles et des jeux.', 'services' => ['maquillage-artistique', 'bulles-enchantees']],
         ['label' => 'Bulles & Magie', 'url' => '/bulles-magie', 'intro' => 'Un univers de bulles et de surprises pour émerveiller petits et grands.', 'services' => ['bulles-enchantees']],
         ['label' => 'Maquillage & Bar à paillettes', 'url' => '/maquillage-bar-a-paillettes', 'intro' => 'Couleurs et paillettes pour accompagner vos événements.', 'services' => ['maquillage-artistique']],
