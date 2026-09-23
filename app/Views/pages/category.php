@@ -1,11 +1,11 @@
-<section class="page-banner">
+<section class="page-banner page-banner-center">
     <div class="container">
         <span class="eyebrow">Nos animations</span>
         <h1><?= htmlspecialchars($category['label']) ?></h1>
         <p><?= htmlspecialchars($category['intro']) ?></p>
     </div>
 </section>
-<section class="section">
+<section class="section category-page">
     <div class="container">
         <?php if (!empty($category['children'])): ?>
             <div class="section-heading">

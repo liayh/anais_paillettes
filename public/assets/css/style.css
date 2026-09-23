@@ -314,3 +314,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--violet); outlin
     .submenu-toggle, .submenu { display: none !important; }
     .pack-section { scroll-margin-top: 110px; }
 }
+
+/* Pages des menus : contenu centré */
+.page-banner-center { text-align: center; }
+.page-banner-center p { max-width: 640px; margin: 0 auto; }
+.category-page .section-heading { margin: 0 auto 2.5rem; text-align: center; }
+.category-page .cards-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+.category-page .cards-grid + .cards-grid { margin-top: 1.5rem; }
+.category-page .cards-grid > * { flex: 1 1 300px; max-width: 380px; text-align: center; }
+.category-page .hero-actions { justify-content: center; margin-top: 3rem; }
+.pack-section { --tone: var(--pink); border-top-color: var(--tone); }
+.pack-section h2 { color: var(--tone); }
+.service-panel { max-width: 760px; margin: 0 auto; }
+.service-panel .hero-actions { justify-content: center; }
+.service-panel h2 { text-align: center; }
