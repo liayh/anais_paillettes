@@ -12,7 +12,11 @@ sort($galleryImages, SORT_NATURAL);
 <section class="section gallery-section">
     <div class="container">
         <div class="section-heading mc-center">
-            <h2><span class="brush brush-teal"><?= htmlspecialchars($galleryTitle) ?></span></h2>
+            <span class="eyebrow">Galerie</span>
+            <h2><?= htmlspecialchars($galleryTitle) ?></h2>
+            <?php if (!empty($gallerySubtitle)): ?>
+                <p><?= htmlspecialchars($gallerySubtitle) ?></p>
+            <?php endif; ?>
         </div>
         <ul class="gallery" data-gallery>
             <?php foreach ($galleryImages as $index => $file): ?>
@@ -20,6 +24,7 @@ sort($galleryImages, SORT_NATURAL);
                 <li>
                     <button type="button" class="gallery-item" data-gallery-index="<?= $index ?>" aria-label="Agrandir la photo <?= $index + 1 ?>">
                         <img src="<?= htmlspecialchars($src) ?>" alt="<?= htmlspecialchars($galleryAlt . ' – photo ' . ($index + 1)) ?>" loading="lazy">
+                        <span class="gallery-zoom" aria-hidden="true">＋</span>
                     </button>
                 </li>
             <?php endforeach; ?>
@@ -30,7 +35,10 @@ sort($galleryImages, SORT_NATURAL);
 <dialog class="lightbox" data-lightbox aria-label="Photo agrandie">
     <button type="button" class="lightbox-close" data-lightbox-close aria-label="Fermer">×</button>
     <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-step="-1" aria-label="Photo précédente">‹</button>
-    <img src="" alt="" data-lightbox-image>
+    <figure class="lightbox-figure">
+        <img src="" alt="" data-lightbox-image>
+        <figcaption data-lightbox-counter></figcaption>
+    </figure>
     <button type="button" class="lightbox-nav lightbox-next" data-lightbox-step="1" aria-label="Photo suivante">›</button>
 </dialog>
 
@@ -39,12 +47,15 @@ sort($galleryImages, SORT_NATURAL);
         const images = [...document.querySelectorAll('[data-gallery] img')];
         const lightbox = document.querySelector('[data-lightbox]');
         const view = lightbox.querySelector('[data-lightbox-image]');
+        const counter = lightbox.querySelector('[data-lightbox-counter]');
         let current = 0;
 
         const show = (index) => {
             current = (index + images.length) % images.length;
             view.src = images[current].src;
             view.alt = images[current].alt;
+            counter.textContent = (current + 1) + ' / ' + images.length;
+            view.animate([{ opacity: 0, transform: 'scale(0.97)' }, { opacity: 1, transform: 'none' }], { duration: 220, easing: 'ease-out' });
         };
 
         document.querySelectorAll('[data-gallery-index]').forEach((button) => {
