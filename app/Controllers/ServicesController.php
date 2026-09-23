@@ -49,7 +49,10 @@ class ServicesController extends Controller
             return;
         }
 
-        $this->render('pages/service-show', [
+        $customView = 'pages/prestations/' . $service['slug'];
+        $view = file_exists(base_path('app/Views/' . $customView . '.php')) ? $customView : 'pages/service-show';
+
+        $this->render($view, [
             'pageTitle' => $service['title'],
             'service' => $service,
         ]);

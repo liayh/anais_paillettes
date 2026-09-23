@@ -1,12 +1,13 @@
 :root {
     /* Charte inspirée des affiches Anaïs Paillettes & Co */
-    --bg: #fffaf6;
+    --bg: #fff7fb;
     --text: #2b2140;
     --muted: #5e5570;
-    --pink: #d6166f;
+    --pink: #d21c78;
     --pink-soft: #fde3ef;
     --teal: #0a7384;
     --teal-soft: #daf3f5;
+    --turquoise: #40afc8;
     --violet: #7a35c2;
     --violet-soft: #efe5fb;
     --gold: #f4c95d;
@@ -328,3 +329,93 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--violet); outlin
 .service-panel { max-width: 760px; margin: 0 auto; }
 .service-panel .hero-actions { justify-content: center; }
 .service-panel h2 { text-align: center; }
+
+/* Coup de pinceau pastel derrière un titre */
+.brush {
+    --brush: var(--pink-soft);
+    padding: 0.05em 0.3em;
+    background:
+        linear-gradient(97deg, transparent 0 1.5%, var(--brush) 2.5% 97%, transparent 98.5%) 0 60% / 100% 78% no-repeat;
+    border-radius: 0.9em 0.3em 0.8em 0.25em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+.brush-teal { --brush: var(--teal-soft); }
+.brush-violet { --brush: var(--violet-soft); }
+
+/* Page Mini Club */
+.mc-center { text-align: center; margin-left: auto; margin-right: auto; }
+.mc-narrow { max-width: 780px; }
+.mc-tagline { font: 600 clamp(1.4rem, 3vw, 2rem) 'Barlow Condensed', sans-serif; color: var(--violet); max-width: 720px; }
+.mc-intro { padding-bottom: 2rem; text-align: center; }
+.mc-lead { font-size: 1.25rem; }
+.mc-goal { font-size: 1.15rem; color: var(--pink); font-weight: 600; }
+.mc-why, .mc-turnkey { padding-top: 2rem; }
+.mc-why .info-panel { border-top-color: var(--turquoise); }
+.mc-turnkey h3 { color: var(--violet); font-size: 1.7rem; }
+.mc-note { padding: 1rem 1.25rem; border-left: 5px solid var(--gold); background: var(--gold-soft); border-radius: 0 16px 16px 0; }
+
+.mc-icon { display: inline-grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 50%; font-size: 1.6rem; background: var(--tone-soft, var(--pink-soft)); margin-bottom: 0.75rem; }
+.mc-universes { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+.mc-universe {
+    --tone: var(--pink); --tone-soft: var(--pink-soft);
+    flex: 1 1 300px; max-width: 370px; padding: 1.75rem; text-align: center;
+    background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 8px solid var(--tone);
+}
+.mc-universe:nth-child(3n+2) { --tone: var(--turquoise); --tone-soft: var(--teal-soft); }
+.mc-universe:nth-child(3n+3) { --tone: var(--violet); --tone-soft: var(--violet-soft); }
+.mc-universe h3 { font-size: 1.7rem; }
+.mc-universe p { margin: 0; color: var(--muted); }
+
+.mc-outdoor { background: var(--splash), linear-gradient(180deg, var(--teal-soft), var(--bg)); }
+
+.mc-timeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; counter-reset: step; }
+.mc-timeline li { position: relative; padding: 1.75rem; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+.mc-timeline li:nth-child(1) { --tone-soft: var(--gold-soft); }
+.mc-timeline li:nth-child(2) { --tone-soft: var(--pink-soft); }
+.mc-timeline li:nth-child(3) { --tone-soft: var(--violet-soft); }
+.mc-timeline h3 { font-size: 1.7rem; color: var(--violet); }
+.mc-timeline p { margin: 0; color: var(--muted); }
+
+.mc-offers { background: var(--splash), var(--bg); }
+.mc-offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.mc-offer {
+    --tone: var(--pink); --tone-soft: var(--pink-soft);
+    overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow);
+    background: #fff; border-top: 10px solid var(--tone);
+}
+.mc-offer-head { padding: 2rem 1.75rem 1.25rem; background: var(--tone-soft); }
+.mc-offer .check-list { margin: 0; padding: 1.5rem 1.75rem 2rem; }
+.mc-offer:nth-child(2) { --tone: var(--turquoise); --tone-soft: var(--teal-soft); }
+.mc-offer:nth-child(3) { --tone: var(--violet); --tone-soft: var(--violet-soft); }
+.mc-offer h3 { text-align: center; font-size: 2rem; margin-bottom: 0.25rem; color: var(--pink); }
+.mc-offer:nth-child(2) h3 { color: var(--teal); }
+.mc-offer:nth-child(3) h3 { color: var(--violet); }
+.mc-price { text-align: center; margin: 0; font: 700 2.8rem 'Barlow Condensed', sans-serif; line-height: 1.1; }
+.mc-when { text-align: center; margin: 0.25rem auto 0; font-size: 0.95rem; color: var(--muted); min-height: 3em; }
+.mc-offer .check-list li::before { color: var(--tone); }
+
+.mc-prestige {
+    margin: 2.5rem auto 0; max-width: 780px; padding: 2.5rem 2rem; text-align: center;
+    border-radius: 32px; background: linear-gradient(120deg, var(--pink-soft), var(--violet-soft) 55%, var(--teal-soft));
+    border: 3px solid var(--pink); box-shadow: 0 20px 44px rgba(210, 28, 120, 0.2);
+}
+.mc-prestige p { margin: 0; }
+.mc-prestige-label { font: 700 clamp(2rem, 4vw, 2.8rem) 'Barlow Condensed', sans-serif; color: var(--pink); }
+.mc-prestige-price { font: 700 clamp(3rem, 7vw, 4.5rem) 'Barlow Condensed', sans-serif; line-height: 1.1; }
+.mc-prestige-combo { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1rem !important; font: 600 1.35rem 'Barlow Condensed', sans-serif; }
+.mc-prestige-combo span:nth-child(odd) { padding: 0.3rem 1rem; background: #fff; border-radius: 999px; color: var(--violet); }
+.mc-prestige-combo span:nth-child(even) { color: var(--pink); align-self: center; }
+.mc-extra {
+    display: table; margin: 1.5rem auto 0; padding: 0.8rem 1.6rem; border-radius: 999px;
+    background: var(--gold-soft); border: 2px solid var(--gold); font-size: 1.15rem;
+}
+
+.mc-cta-btn { margin-top: 1rem; padding: 1.2rem 2.6rem; font-size: 1.6rem; text-transform: uppercase; }
+.mc-phone { margin-top: 1.25rem; font: 600 1.8rem 'Barlow Condensed', sans-serif; }
+.mc-phone a { color: var(--pink); }
+
+@media (max-width: 980px) {
+    .mc-timeline, .mc-offer-grid { grid-template-columns: 1fr; }
+    .mc-when { min-height: 0; }
+}
