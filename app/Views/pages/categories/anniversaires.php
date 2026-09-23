@@ -127,6 +127,6 @@ $included = [
 <?php
 $galleryFolder = 'anniversaires';
 $galleryTitle = '📸 Les anniversaires en images';
-$galleryAlt = 'Anniversaire animé par Anaïs Paillettes & Co';
+$galleryAlt = 'Ambiance d’anniversaire';
 require base_path('app/Views/partials/gallery.php');
 ?>

@@ -27,6 +27,14 @@ BASE_URL=/nom-du-depot php build.php
 
 Les formulaires ouvrent la messagerie du visiteur (lien `mailto:`), ils n'ont pas besoin de serveur.
 
+## Galeries photo
+
+Les photos déposées dans `public/assets/img/galerie/<page>/` (jpg, png, webp) s'affichent
+automatiquement en bas de la page, par ordre alphabétique.
+
+Les fichiers `exemple-*.jpg` de `galerie/anniversaires/` sont des photos d'illustration
+libres de droits (CC0, rawpixel.com) à remplacer par les vraies photos d'Anaïs.
+
 ## Local
 
 Avec PHP installé :
