@@ -23,12 +23,16 @@ $offers = [
         <span class="eyebrow">Mariages</span>
         <h1>Mini Club</h1>
         <p class="mc-tagline">Une journée magique pour les enfants, un mariage serein pour les parents</p>
+        <p class="an-hero-text">De La Rochelle à Royan, en passant par Saintes, Angoulême ou l’Île de Ré, Anaïs se déplace directement sur votre lieu de réception pour créer un véritable Mini Club éphémère dédié aux enfants.</p>
+        <div class="hero-actions">
+            <a class="btn" href="#formules">Voir les formules · dès 750 €</a>
+            <a class="btn btn-outline" href="<?= url('/contact') ?>">Demander un devis</a>
+        </div>
     </div>
 </section>
 
 <section class="section mc-intro">
     <div class="container mc-narrow">
-        <p class="mc-lead">De La Rochelle à Royan, en passant par Saintes, Angoulême ou l’Île de Ré, Anaïs se déplace directement sur votre lieu de réception pour créer un véritable Mini Club éphémère dédié aux enfants.</p>
         <p>Pendant que vous et vos invités profitez pleinement de cette journée unique, les plus jeunes vivent eux aussi leur propre fête : jeux, découvertes, activités créatives, maquillage, moments de complicité et petites attentions rythment leur journée.</p>
         <p class="mc-goal"><strong>L’objectif :</strong> des enfants heureux, occupés et accompagnés, et des parents qui profitent pleinement du mariage l’esprit léger.</p>
     </div>
