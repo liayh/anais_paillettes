@@ -126,6 +126,6 @@ $included = [
 
 <?php
 $galleryFolder = 'anniversaires';
-$galleryPreview = 5;
+$galleryPreview = 1;
 require base_path('app/Views/partials/gallery.php');
 ?>

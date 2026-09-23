@@ -533,3 +533,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--violet); outlin
 .lightbox-next { right: 1rem; }
 .gallery-more { justify-content: center; margin-top: 2.5rem; }
 a.gallery-item { cursor: pointer; }
+
+/* Aperçu à une seule photo */
+.gallery-single { grid-template-columns: 1fr; grid-auto-rows: clamp(260px, 45vw, 460px); max-width: 860px; }
+.gallery-single li:first-child { grid-column: auto; grid-row: auto; }
+.gallery-single .gallery-item::after { opacity: 1; background: linear-gradient(180deg, transparent 55%, rgba(43, 33, 64, 0.55)); }
+.gallery-cover-label {
+    position: absolute; left: 50%; bottom: 1.5rem; z-index: 1; transform: translateX(-50%);
+    padding: 0.7rem 1.5rem; border-radius: 999px; background: #fff; color: var(--pink); white-space: nowrap;
+    font: 600 1.3rem 'Barlow Condensed', sans-serif; box-shadow: var(--shadow); transition: transform 0.25s ease;
+}
+.gallery-item:hover .gallery-cover-label { transform: translateX(-50%) scale(1.05); }

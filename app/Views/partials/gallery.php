@@ -13,6 +13,7 @@ $isPreview = $galleryPreview !== null;
 if ($isPreview) {
     $galleryImages = array_slice($galleryImages, 0, $galleryPreview);
 }
+$isCover = $isPreview && count($galleryImages) === 1;
 ?>
 <?php if ($galleryImages !== []): ?>
 <section class="section gallery-section">
@@ -24,7 +25,7 @@ if ($isPreview) {
                 <p><?= htmlspecialchars($galleryConfig['subtitle']) ?></p>
             </div>
         <?php endif; ?>
-        <ul class="gallery" data-gallery>
+        <ul class="gallery<?= $isCover ? ' gallery-single' : '' ?>" data-gallery>
             <?php foreach ($galleryImages as $index => $file): ?>
                 <?php
                 $src = asset($galleryPath . '/' . rawurlencode(basename($file)));
@@ -32,17 +33,21 @@ if ($isPreview) {
                 ?>
                 <li id="photo-<?= $index + 1 ?>">
                     <?php if ($isPreview): ?>
-                        <a class="gallery-item" href="<?= htmlspecialchars(url($galleryConfig['url']) . '#photo-' . ($index + 1)) ?>">
+                        <a class="gallery-item" href="<?= htmlspecialchars(url($galleryConfig['url']) . ($isCover ? '' : '#photo-' . ($index + 1))) ?>">
                     <?php else: ?>
                         <button type="button" class="gallery-item" data-gallery-index="<?= $index ?>" aria-label="Agrandir la photo <?= $index + 1 ?>">
                     <?php endif; ?>
                         <img src="<?= htmlspecialchars($src) ?>" alt="<?= htmlspecialchars($alt) ?>" loading="lazy">
-                        <span class="gallery-zoom" aria-hidden="true">＋</span>
+                        <?php if ($isCover): ?>
+                            <span class="gallery-cover-label">📸 Voir les <?= $galleryTotal ?> photos ›</span>
+                        <?php else: ?>
+                            <span class="gallery-zoom" aria-hidden="true">＋</span>
+                        <?php endif; ?>
                     <?= $isPreview ? '</a>' : '</button>' ?>
                 </li>
             <?php endforeach; ?>
         </ul>
-        <?php if ($isPreview): ?>
+        <?php if ($isPreview && !$isCover): ?>
             <div class="hero-actions gallery-more">
                 <a class="btn" href="<?= url($galleryConfig['url']) ?>">Voir toute la galerie (<?= $galleryTotal ?> photos) ›</a>
             </div>
