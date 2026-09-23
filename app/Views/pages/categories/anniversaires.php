@@ -123,3 +123,10 @@ $included = [
         <p class="mc-phone"><a href="tel:+33783659843">📞 <?= htmlspecialchars($phone) ?></a></p>
     </div>
 </section>
+
+<?php
+$galleryFolder = 'anniversaires';
+$galleryTitle = '📸 Les anniversaires en images';
+$galleryAlt = 'Anniversaire animé par Anaïs Paillettes & Co';
+require base_path('app/Views/partials/gallery.php');
+?>
